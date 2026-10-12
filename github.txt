@@ -1,0 +1,14 @@
+git config --global user.name
+git config --global user.email
+
+git config --global user.name "Karthick Vijay"
+git config --global user.email "your-email@example.com"
+
+Open Windows Credential Manager from the Start menu.
+
+Select Windows Credentials.
+
+Look for GitHub entries such as git:https://github.com.
+
+Remove the relevant saved GitHub credential for the wrong account.
+

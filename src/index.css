@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+@theme {
+  --color-maincolor: #5234c9;
+  --color-secondarycolor: #666666;
+  --color-paratextlight: #707070;
+  --color-inputbg: #E9E9FF;
+  --color-inputbg2: #CABDFF;
+  --color-cardborder: #EFEEEE;
+  --color-borderoutline: #D5CBFE;
+   --color-lightbgcolor: rgba(218, 214, 236, 0.56);
+  --shadow-main: 0px 19px 73px rgba(213, 203, 254, 0.05);
+  --cardshadow: 0px 15px 50px 0px rgba(82, 52, 201, 0.24);
+  --cardbtn: 0px 10px 20px rgba(194, 194, 194, 0.46);
+  --shadow-mainsecondary: 0px 4px 40px rgba(213, 203, 254, 0.25);
+ 
+  --color-footerbg: #e7eaef;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease-out;
+}
+.Mui-checked{
+  background-color: red;
+}
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+100% { transform: translateY(0px); }
+}
+
+@keyframes floatSlow {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+
+.animate-float{
+animation: float 6s ease-in-out infinite;
+}
+
+.animate-floatSlow{
+animation: floatSlow 10s ease-in-out infinite;
+}
+
+
+.animated-gradient {
+    /* background: linear-gradient(45deg, #e63946 0%, #5234C9 40%, #7c86ff 60%, #118ab2 80%, #5234C9 100%); */
+    background-size: 250% 250%; animation: animated-gradient-prism 12s ease-in-out infinite;
+}
+
+
+@keyframes animated-gradient-prism {
+    0% {
+        background-position: 0% 50%;
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        background-position: 100% 50%;
+        filter: hue-rotate(15deg);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: hue-rotate(0deg);
+    }
+}
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  border-radius: 9999px;
+  opacity: 0.3;
+  animation: rise 10s infinite ease-in;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-800px) scale(1.2);
+    opacity: 0;
+  }
+}
+.animation-delay-0 { animation-delay: 0s; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+.animation-delay-6000 { animation-delay: 6s; }
+
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 255, 255, 0.15);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  filter: blur(80px);
+}
+
+.login-container::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 0, 150, 0.15);
+  border-radius: 50%;
+  bottom: -120px;
+  right: -100px;
+  filter: blur(80px);
+}
+
+.login-card {
+  width: 380px;
+  padding: 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.login-card h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #d1d1d1;
+  margin-bottom: 30px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 14px 16px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.input-box:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.icon {
+  margin-right: 12px;
+  color: #ffffff;
+}
+
+.input-box input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+
+.input-box input::placeholder {
+  color: #ddd;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 114, 255, 0.4);
+}
+
+.footer-text {
+  margin-top: 20px;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.footer-text span {
+  color: #00c6ff;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .login-card h1 {
+    font-size: 26px;
+  }
+}
